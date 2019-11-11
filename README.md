@@ -1,4 +1,4 @@
-# ARM-Keil-IDE-view-memory-in-debug-mode
+# ARM Keil IDE view memory in debug mode
 ARM Keil集成开发环境中调试模式下查看存储器数据内容
 
 <br />
@@ -71,3 +71,14 @@ int main(void)
 图中用红色圆圈圈出来的图标就是Watch and Call Stack Window按钮。点击此按钮之后，编辑窗口的下方将会显示出用于查看局部变量以及全局变量的调试窗口。在截图中，我们可以看到这里显示的是局部变量“i”，它当前的值为0。所以如果我们要查看当前函数的局部变量的话，使用此窗口的“Locals”选项卡进行查看。
 
 ![debug1.png](https://github.com/zenny-chen/ARM-Keil-IDE-view-memory-in-debug-mode/blob/master/debug1.PNG)
+
+如果我们想要查看全局变量，那么需要点击下方“Watch and Call Stack Window”窗口中的“Watch #”选项卡。watch选项卡提供了两个，如果我们要观察的全局变量较多的话可以分两组，分别在这两个watch选项卡中查看。我们选中“Type F2 to edit”文本框，然后点击F2功能键即可编辑了。输入想要观察的全局变量名即能查看其详细的数据内容了，如下图所示。点击变量名左边的加号“+”按钮，即可展开该变量的数据内容。
+
+![debug2.png](https://github.com/zenny-chen/ARM-Keil-IDE-view-memory-in-debug-mode/blob/master/debug2.PNG)
+
+这里需要再说明一下的是，如果当前所观察的变量未展开，那么在右边“Value”一栏中所显示的是该变量所在的地址。其中，“X”前缀表示该变量位于外部RAM中（对应于`xdata`）；“D”前缀表示该变量位于内部SRAM（对应于`data`）；“C”前缀表示该变量位于ROM存储空间（对应于`code`）。这个规则将用于下面所提到的对指定位置的存储器查看数据内容的情况。
+
+<br />
+
+### 查看指定存储器位置的数据内容
+
