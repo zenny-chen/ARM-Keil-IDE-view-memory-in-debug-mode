@@ -51,8 +51,13 @@ int main(void)
     sBuffer[101] = sROMBuffer[3] + sDataBuffer[3];
     
     _nop_();
+    
+    while(1)
+    {
+        _nop_();
+    }
 }
     
 ```
 
-完成之后，我们可以在“_nop_();”这条语句处设置断点。
+完成之后，我们可以在第一次出现的“_nop_();”这条语句处设置断点。
