@@ -80,7 +80,14 @@ int main(void)
 
 当然，“Watch”选项卡的功能还不仅限于此，其功能非常强大！我们还能查看指定变量的地址，甚至还能直接通过它来即时计算一个表达式，如下图所示。另外，我们鼠标右键点击Value一栏，还能选择以十六进制方式查看还是以十进制方式查看。
 
+![debug4.png](https://github.com/zenny-chen/ARM-Keil-IDE-view-memory-in-debug-mode/blob/master/debug4.PNG)
+
 <br />
 
 ### 查看指定存储器位置的数据内容
+
+Keil开发环境提供了调试模式下查看存储器内容的功能。为了更好地体验对存储器内容的查看，如果我们之前打开了“Watch and Call Stack Window”窗口的话，则再次点击该图标按钮将它隐藏。然后点击第一张图中用红色方框框出来的图标，该图标即为“Memory Window”（存储器查看窗口）。下方出现了存储器监视窗口之后我们就可以通过指定具体地址来查看该位置的数据了。这里对地址的输入遵循上面所提到的存储器空间属性，即我们需要添加表示存储器类型的前缀——“D”表示内部SRAM；“X”表示外部RAM；“C”表示ROM代码以及常量存储空间。如下图所示。
+
+![debug3.png](https://github.com/zenny-chen/ARM-Keil-IDE-view-memory-in-debug-mode/blob/master/debug3.PNG)
+
 
